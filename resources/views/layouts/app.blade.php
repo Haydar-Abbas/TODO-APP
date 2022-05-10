@@ -26,10 +26,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/todos">Todos</a>
+            <a class="nav-link active" aria-current="page" href="{{route('todos.index')}}">Todos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/create">Create TODO</a>
+            <a class="nav-link" href="{{route('todos.create')}}">Create TODO</a>
           </li>
         </ul>
       </div>

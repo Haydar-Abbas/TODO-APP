@@ -41,7 +41,7 @@ class TodoController extends Controller
 
         session()->flash('success', 'Todo Created Successfully!');
 
-        return redirect('/todos');
+        return redirect(route('todos.index'));
     }
 
 
@@ -65,7 +65,7 @@ class TodoController extends Controller
 
         session()->flash('success', 'Todo Updated Successfully!');
 
-        return redirect('/todos');
+        return redirect(route('todos.index'));
     }
 
 
@@ -74,7 +74,7 @@ class TodoController extends Controller
         $todo->completed = true;
         $todo->save();
 
-        return redirect('/todos');
+        return redirect(route('todos.index'));
     }
 
 
@@ -84,6 +84,6 @@ class TodoController extends Controller
 
         session()->flash('delete', 'Todo Deleted Successfully!');
 
-        return redirect('/todos');
+        return redirect(route('todos.index'));
     }
 }

@@ -22,7 +22,7 @@
   <div class="content text-center">
     <div class="title m-b-md">
 
-      <a href="/todos" style="text-decoration: none; color: blue">
+      <a href="{{route('todos.index')}}" style="text-decoration: none; color: blue">
         <h2>TODOS APP</h2>
       </a>
 

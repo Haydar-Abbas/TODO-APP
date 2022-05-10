@@ -10,7 +10,7 @@
         <h1>Edit Todo</h1>
       </div>
       <div class="card-body">
-        <form action="/update/{{$todo->id}}" method="POST">
+        <form action="update/{{$todo->id}}" method="POST">
           @csrf
           <div class="mb-3 @error('todoTitle') is-invalid @enderror">
             <input type="text" name="todoTitle" class="form-control" value="{{$todo->title}}">

@@ -10,7 +10,7 @@
         <h1>Create Todo</h1>
       </div>
       <div class="card-body">
-        <form action="/store" method="POST">
+        <form action="{{route('todos.store')}}" method="POST">
           @csrf
           <div class="mb-3 @error('todoTitle') is-invalid @enderror">
             <input type="text" name="todoTitle" class="form-control" placeholder="Enter Your Todo">

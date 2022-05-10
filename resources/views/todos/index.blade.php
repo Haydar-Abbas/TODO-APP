@@ -30,13 +30,13 @@
               {{ $todo->title }}
               <span class="float-end">
                 @if ($todo->completed === 0)
-                  <a href="/complete/{{$todo->id}}"><i class="bi bi-clipboard2-check-fill" style="color: orange"></i></a>
+                  <a href="complete/{{$todo->id}}"><i class="bi bi-clipboard2-check-fill" style="color: orange"></i></a>
                 @elseif ($todo->completed === 1)
                   <i class="bi bi-clipboard2-check-fill" style="color: chartreuse"></i>
                 @endif
-                <a href="/show/{{ $todo->id }}"><i class="bi bi-eye-fill" style="color: blue"></i></a>
-                <a href="/edit/{{$todo->id}}"><i class="bi bi-pencil-square" style="color: green"></i></i></a>
-                <a href="/delete/{{$todo->id}}"><i class="bi bi-trash3" style="color: red"></i></a>
+                <a href="show/{{$todo->id}}"><i class="bi bi-eye-fill" style="color: blue"></i></a>
+                <a href="edit/{{$todo->id}}"><i class="bi bi-pencil-square" style="color: green"></i></i></a>
+                <a href="delete/{{$todo->id}}"><i class="bi bi-trash3" style="color: red"></i></a>
               </span>
             </li>
           @empty

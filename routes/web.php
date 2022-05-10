@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\TodoController;
-use App\Models\Todo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,18 +18,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('todos', [TodoController::class, 'index']);
+Route::get('todos', [TodoController::class, 'index'])->name('todos');
 
-Route::get('show/{todo}', [TodoController::class, 'show']);
+Route::get('show/{todo}', [TodoController::class, 'show'])->name('show');
 
-Route::get('create', [TodoController::class, 'create']);
+Route::get('create', [TodoController::class, 'create'])->name('create');
 
-Route::post('store', [TodoController::class, 'store']);
+Route::post('store', [TodoController::class, 'store'])->name('store');
 
-Route::get('edit/{todo}', [TodoController::class, 'edit']);
+Route::get('edit/{todo}', [TodoController::class, 'edit'])->name('edit');
 
-Route::post('update/{todo}', [TodoController::class, 'update']);
+Route::post('update/{todo}', [TodoController::class, 'update'])->name('update');
 
-Route::get('delete/{todo}', [TodoController::class, 'delete']);
+Route::get('delete/{todo}', [TodoController::class, 'delete'])->name('delete');
 
-Route::get('complete/{todo}', [TodoController::class, 'complete']);
+Route::get('complete/{todo}', [TodoController::class, 'complete'])->name('complete');
+
+Route::resource('todos', TodoController::class);
