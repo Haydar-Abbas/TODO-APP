@@ -14,11 +14,11 @@
           <span>Details</span>
           @if ($todos->completed === 0)
             <span class="badge bg-warning float-end">
-              {{ boolval($todos->completed) ? 'Completed' : 'Non Completed' }}
+              Non Completed
             </span>
-          @elseif ($todos->completed === 1)
+          @else
             <span class="badge bg-success float-end">
-              {{ boolval($todos->completed) ? 'Completed' : 'Non Completed' }}
+              Completed
             </span>
           @endif
 
